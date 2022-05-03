@@ -1,0 +1,20 @@
+// npm init -y
+// npm i -D typescript
+// package.json => scripts {start => build: "tsc"}
+//타입스크립트 사용시 파일이름은 무조건 tsconfig.json이어야함
+{
+  //ts파일들의 위치
+  "include": ["src"],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    //컴파일된 js 파일의 위치지정
+    "outDir": "build",
+    //어떤 버전의 js로 컴파일할지
+    "target": "ES6",
+    // 어떤 환경에서 코드를 실행할것인지(자동완성사용가능, ES6를 지원하는 서버(es6), 웹페이지(DOM))
+    "lib": ["ES6", "DOM"],
+    "strict": true,
+    //js파일의 접근을 허용(js파일 import가능)
+    "allowJs": true
+  }
+}
